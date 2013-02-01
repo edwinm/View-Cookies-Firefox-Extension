@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+	<RDF:Seq RDF:about="urn:mozilla:package:root">
+		<RDF:li resource="urn:mozilla:package:viewcookies"/>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="urn:mozilla:overlays">
+		<RDF:li resource="chrome://navigator/content/pageInfo.xul"/>
+		<RDF:li resource="chrome://browser/content/pageInfo.xul"/>
+		<RDF:li resource="chrome://navigator/content/pageinfo/pageInfo.xul"/>
+		<RDF:li resource="chrome://browser/content/pageinfo/pageInfo.xul"/>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="chrome://navigator/content/pageInfo.xul">
+		<RDF:li>chrome://viewcookies/content/tabCookiesOverlay.xul</RDF:li>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="chrome://browser/content/pageInfo.xul">
+		<RDF:li>chrome://viewcookies/content/tabCookiesOverlay.xul</RDF:li>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="chrome://navigator/content/pageinfo/pageInfo.xul">
+		<RDF:li>chrome://viewcookies/content/tabCookiesOverlay.xul</RDF:li>
+	</RDF:Seq>
+
+	<RDF:Seq RDF:about="chrome://browser/content/pageinfo/pageInfo.xul">
+		<RDF:li>chrome://viewcookies/content/tabCookiesOverlay.xul</RDF:li>
+	</RDF:Seq>
+
+	<RDF:Description RDF:about="urn:mozilla:package:viewcookies"
+		chrome:name="viewcookies"
+		chrome:displayName="View Cookies 1.10.1"
+		chrome:author="Edwin Martin"
+		chrome:authorURL="mailto:edwin@bitstorm.org"
+		chrome:description="Displays cookies of web page."
+		chrome:xpcNativeWrappers="no"
+		chrome:extension="true">
+	</RDF:Description>
+
+</RDF:RDF>

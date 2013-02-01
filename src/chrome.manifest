@@ -1,0 +1,6 @@
+overlay	chrome://navigator/content/pageInfo.xul	chrome://viewcookies/content/tabCookiesOverlay.xul
+overlay	chrome://browser/content/pageInfo.xul	chrome://viewcookies/content/tabCookiesOverlay.xul
+overlay	chrome://navigator/content/pageinfo/pageInfo.xul	chrome://viewcookies/content/tabCookiesOverlay.xul
+overlay	chrome://browser/content/pageinfo/pageInfo.xul	chrome://viewcookies/content/tabCookiesOverlay.xul
+content	viewcookies	jar:chrome/viewcookies.jar!/content/
+skin	viewcookies	classic/1.0	jar:chrome/viewcookies.jar!/skin/classic/
