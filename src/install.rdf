@@ -6,7 +6,7 @@
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>{8F6A6FD9-0619-459f-B9D0-81DE065D4E21}</em:id>
 		<em:name>View Cookies</em:name>
-		<em:version>1.10.3</em:version>
+		<em:version>1.13</em:version>
 		<em:description>View cookies of the current web page.</em:description>
 		<em:type>2</em:type>
 		<em:creator>Edwin Martin</em:creator>
@@ -16,7 +16,6 @@
 		<em:homepageURL>http://www.bitstorm.org/extensions/view-cookies/</em:homepageURL>
 		<em:iconURL>chrome://viewcookies/skin/viewcookies-small.png</em:iconURL>
 		<em:aboutURL>chrome://viewcookies/content/about.xul</em:aboutURL>
-		<em:unpack>false</em:unpack>
 
 		<em:targetApplication>
 			<Description>

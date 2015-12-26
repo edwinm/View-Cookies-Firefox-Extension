@@ -1,4 +1,4 @@
-// Copyright 2004 - 2010 Edwin Martin
+// Copyright 2004 - 2015 Edwin Martin
 // This code is triple licensed under MPL/GPL/LGPL. See license.txt for details.
 
 // Java-like namespace: prefixed with reverse domain name
@@ -56,9 +56,9 @@ var orgBitstormViewCookies = (function() {
 		var cookieManager = Components.classes["@mozilla.org/cookiemanager;1"].getService(Components.interfaces.nsICookieManager);
 		var cookies = [];
 		// Other way to get url?
-		var cookieContent = "gWindow" in window ? gWindow : theWindow;
-		var domain = cookieContent.location.hostname;
-		var path = cookieContent.location.pathname;
+		var uri = getUri();
+		var domain = uri.host;
+		var path = uri.path;
 		var iter = cookieManager.enumerator;
 		var dotDomain;
 		while ( iter.hasMoreElements() ){
@@ -135,5 +135,13 @@ var orgBitstormViewCookies = (function() {
 		if ( t.length < s.length )
 			return false;
 		return t.substr( 0, s.length ) == s;
+	}
+
+	function getUri() {
+		var windowsService = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
+		var currentWindow = windowsService.getMostRecentWindow('navigator:browser');
+		var browser = currentWindow.getBrowser();
+
+		return browser.currentURI;
 	}
 })();
